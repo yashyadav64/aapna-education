@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Hub</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes textColorAnimation {
+            0% { color: #ffcc00; }
+            25% { color: #ff2e63; }
+            50% { color: #08d9d6; }
+            75% { color: #ff8c00; }
+            100% { color: #ffcc00; }
+        }
+
+        @keyframes textZoomIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #00c6ff, #0072ff); /* Updated cool gradient background */
+            color: white;
+            overflow-x: hidden;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        header img {
+            width: 60px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 10px;
+            animation: textColorAnimation 3s infinite, textZoomIn 1s ease-out; /* Added textZoomIn animation */
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        nav ul li::before {
+            content: '\2807';
+            font-size: 18px;
+            color: #ffcc00;
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('https://source.unsplash.com/1920x1080/?education,learning') no-repeat center/cover;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in, textColorAnimation 4s infinite, textZoomIn 1s ease-out; /* Combined animations */
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            animation: fadeIn 2.5s ease-in, textZoomIn 1.5s ease-out;
+        }
+
+        .hero .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+            filter: brightness(1.5);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #ff8c00, #ff2e63);
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: linear-gradient(45deg, #ff2e63, #ff8c00);
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero {
+                padding: 80px 20px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .cta-btn {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            header {
+                padding: 10px;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .social-icons img {
+                width: 25px;
+            }
+
+            .cta-btn {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/60" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="E:\MY DATA COCHING\eduction website\Courses.html">Courses</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Enquiry</a></li>
+                <li><a href="#">Alumni</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome To Education Hub</h1>
+        <p>Empowering students with knowledge and opportunities to build a brighter future in the digital era.</p>
+        <div class="social-icons">
+            <a href="#"><img src="https://via.placeholder.com/30" alt="Facebook"></a>
+            <a href="#"><img src="https://via.placeholder.com/30" alt="Instagram"></a>
+            <a href="#"><img src="https://via.placeholder.com/30" alt="YouTube"></a>
+            <a href="#"><img src="https://via.placeholder.com/30" alt="Twitter"></a>
+            <a href="#"><img src="https://via.placeholder.com/30" alt="LinkedIn"></a>
+        </div>
+        <a href="#" class="cta-btn">Get Started</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Education Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

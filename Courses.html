@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Courses</title>
+    <style>
+        /* Basic animations and styles */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #f7b42c, #fc575e); 
+            color: white;
+            overflow-x: hidden;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        header img {
+            width: 60px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background: url('https://source.unsplash.com/1920x1080/?education,study') no-repeat center/cover;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #ff8c00, #ff2e63);
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        .course-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .course-card {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .course-card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                display: none;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero {
+                padding: 80px 20px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .cta-btn {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+
+            .course-cards {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .course-card {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            header {
+                padding: 10px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .cta-btn {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+
+            nav ul {
+                display: none; /* Hide menu items */
+            }
+
+            nav .hamburger {
+                display: block;
+                cursor: pointer;
+                font-size: 30px;
+                color: white;
+            }
+
+            nav ul.active {
+                display: block;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                font-size: 18px;
+            }
+
+            .course-cards {
+                grid-template-columns: 1fr; /* Stacked cards on mobile */
+            }
+
+            .course-card {
+                margin-bottom: 20px;
+            }
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://via.placeholder.com/60" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Online Courses</h1>
+        <p>Start your learning journey today with a variety of courses designed for all levels.</p>
+        <a href="#" class="cta-btn">Explore Courses</a>
+    </section>
+
+    <section class="course-cards">
+        <div class="course-card">
+            <h3>Web Development</h3>
+            <p>Learn the fundamentals of web development, including HTML, CSS, and JavaScript.</p>
+            <a href="#" class="cta-btn">Join Now</a>
+        </div>
+        <div class="course-card">
+            <h3>Data Science</h3>
+            <p>Master the art of data analysis and visualization using Python and machine learning techniques.</p>
+            <a href="#" class="cta-btn">Join Now</a>
+        </div>
+        <div class="course-card">
+            <h3>Graphic Design</h3>
+            <p>Learn graphic design skills and create stunning visuals using Adobe Photoshop and Illustrator.</p>
+            <a href="#" class="cta-btn">Join Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Online Courses. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

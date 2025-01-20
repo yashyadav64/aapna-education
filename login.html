@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="register-container">
+        <h2 class="register-heading">Register</h2>
+        <form action="#" method="POST" id="register-form">
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="new-username" placeholder="Create username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="new-password" placeholder="Create password" required>
+            </div>
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+        <p>Already have an account? <a href="index.html">Login Here</a></p>
+        <p id="success-message" class="success-message">Registration Successful!</p>
+    </div>
+    <script src="register.js"></script>
+    <style>
+        /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Login and Register Container */
+.login-container, .register-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Heading */
+.login-heading, .register-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: fontAnimation 3s ease-in-out infinite;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+input:focus {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Button Styling */
+button.login-btn, button.register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.login-btn:hover, button.register-btn:hover {
+    background-color: #45a049;
+}
+
+/* Links */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Error and Success Messages */
+.error-message, .success-message {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.error-message {
+    color: red;
+}
+
+.success-message {
+    color: green;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fontAnimation {
+    0%, 100% {
+        color: #fff;
+        font-size: 24px;
+    }
+    50% {
+        color: #ffcc00;
+        font-size: 30px;
+    }
+}
+
+    </style>
+    <script></script>
+</body>
+</html>

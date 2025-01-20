@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Join Our Team</title>
+    <style>
+        /* Keyframe Animations */
+        @keyframes textColorAnimation {
+            0% { color: #ff6347; }
+            25% { color: #ff4500; }
+            50% { color: #32cd32; }
+            75% { color: #1e90ff; }
+            100% { color: #ff6347; }
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-color: #ff6347; }
+            50% { background-color: #ff4500; }
+            100% { background-color: #32cd32; }
+            100% { background-color: #32cd32; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #ff6347, #ff4500, #32cd32);
+            background-size: 300% 300%;
+            animation: backgroundAnimation 10s ease-in-out infinite;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            animation: textColorAnimation 5s infinite;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background: url('https://source.unsplash.com/1920x1080/?career,work') no-repeat center/cover;
+            background-size: cover;
+            color: white;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero h2 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #ff8c00, #ff2e63);
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: linear-gradient(45deg, #ff2e63, #ff8c00);
+            transform: scale(1.1);
+        }
+
+        .job-listings {
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .job-card {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .job-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .job-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .job-card p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #32cd32, #ff4500);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: background 0.3s;
+        }
+
+        .apply-btn:hover {
+            background: linear-gradient(45deg, #ff4500, #32cd32);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 40px;
+            }
+
+            .cta-btn {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+
+            .job-listings {
+                grid-template-columns: 1fr;
+            }
+
+            .job-card {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .cta-btn {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+
+            .apply-btn {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Join Our Team</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Your Dream Job Awaits</h2>
+        <p>Join a dynamic team where you can grow, innovate, and make a difference. We are hiring!</p>
+        <a href="#job-listings" class="cta-btn">See Open Positions</a>
+    </section>
+
+    <section class="job-listings" id="job-listings">
+        <div class="job-card">
+            <h3>Front-End Developer</h3>
+            <p>Build beautiful, user-friendly interfaces with modern web technologies like React, Vue, and Angular.</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+            <h3>Data Scientist</h3>
+            <p>Use data to drive business decisions, create predictive models, and leverage machine learning techniques.</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+            <h3>Graphic Designer</h3>
+            <p>Design stunning visuals and branding materials for a wide range of digital and print platforms.</p>
+            <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Our Company. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
